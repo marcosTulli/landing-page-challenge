@@ -1,10 +1,21 @@
 import React from "react";
-import { Header } from "../../components/landing";
+import {
+  Header,
+  Hero,
+  Banner,
+  Benefits,
+  Footer,
+} from "../../components/landing";
+import classes from "./Landing.module.scss";
 
 const Landing = () => {
   return (
-    <div>
+    <div className={classes.container}>
       <Header />
+      <Hero />
+      <Banner />
+      <Benefits />
+      <Footer />
     </div>
   );
 };

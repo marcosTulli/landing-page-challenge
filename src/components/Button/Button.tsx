@@ -1,7 +1,18 @@
-import React from "react";
+import React, { ReactNode } from "react";
+import classes from "./Button.module.scss";
 
-const Button = ({ children }) => {
-  return <div>{children}</div>;
+interface ButtonProps {
+  children: ReactNode;
+  variant?: string;
+}
+
+function getButtonStyles(variant) {
+  return classes.base;
+}
+
+const Button = ({ children, variant }: ButtonProps) => {
+  const className = getButtonStyles(variant);
+  return <button className={className}>{children}</button>;
 };
 
 export default Button;
