@@ -1,3 +1,42 @@
+@font-face {
+  font-family: Montserrat;
+  src: url("../../assets/Fonts/Montserrat/Montserrat-Medium.ttf")
+    format("truetype");
+}
+
+* {
+  font-family: Montserrat;
+}
+
+body {
+  height: 100%;
+}
+
 .container {
-  display: grid;
+  // display: grid;
+  // grid: auto-flow min-content / 1fr;
+  // grid-template-areas:
+  //   "header"
+  //   "hero"
+  //   "banner"
+  //   "benefits"
+  //   "footer";
+  // grid-gap: 1em;
+  // margin: 1em;
+}
+
+.header {
+  grid-area: header;
+}
+.hero {
+  grid-area: hero;
+}
+.banner {
+  grid-area: banner;
+}
+.benefits {
+  grid-area: benefits;
+}
+.footer {
+  grid-area: footer;
 }
