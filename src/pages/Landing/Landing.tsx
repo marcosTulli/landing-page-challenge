@@ -5,7 +5,7 @@ import {
   Banner,
   Benefits,
   Footer,
-} from "../../components/landing";
+} from "../../components/LandingPage";
 import classes from "./Landing.module.scss";
 
 const Landing = () => {

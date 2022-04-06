@@ -3,14 +3,14 @@ import classes from "./Button.module.scss";
 
 interface ButtonProps {
   children: ReactNode;
-  variant?: string;
+  variant?: "base" | "primary" | "outlined";
 }
 
-function getButtonStyles(variant) {
-  return classes.base;
+function getButtonStyles(variant: string) {
+  return classes[variant];
 }
 
-const Button = ({ children, variant }: ButtonProps) => {
+const Button: React.FC<ButtonProps> = ({ children, variant = "primary" }) => {
   const className = getButtonStyles(variant);
   return <button className={className}>{children}</button>;
 };
