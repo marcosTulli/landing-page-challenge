@@ -1,8 +1,8 @@
 import React from "react";
+import "normalize.css";
+import "./App.scss";
 
 import { Landing } from "./pages/Landing";
-
-import "normalize.css";
 
 const App = () => {
   return (

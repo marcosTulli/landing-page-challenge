@@ -1,7 +1,44 @@
+@import "../../../scss/variables.scss";
+
+.banner {
+  padding-top: 1em;
+}
+
 .bannerImage {
   background-image: url("../../../assets/img_woloxer.png");
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 2em;
+  }
 }
 
 .bannerText {
   background-color: #f2f5fa;
+  font-size: 1.5em;
+  font-weight: 400;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.green {
+  color: $woloxGreen;
+  font-weight: 600;
+}
+
+.blue {
+  color: $woloxBlue;
+  font-weight: 600;
+}
+
+.twitterLogo {
+  color: white;
+  padding-top: 3em;
+  padding-bottom: 1em;
 }

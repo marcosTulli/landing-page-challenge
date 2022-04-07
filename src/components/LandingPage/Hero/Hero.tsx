@@ -6,10 +6,13 @@ const Hero = () => {
   return (
     <div className={classes.heroContainer}>
       <h1 className={classes.heading}>
-        Bienvenido a tu <strong>Entrevista Técnica</strong> en
+        Bienvenido a tu <br />
+        <strong>Entrevista Técnica</strong> en <br />
         <span>Wolox</span>
       </h1>
-      <img className={classes.heroImage} src={heroImage} alt="hero" />
+      <div className={classes.imageContainer}>
+        <img className={classes.heroImage} src={heroImage} alt="hero" />
+      </div>
     </div>
   );
 };

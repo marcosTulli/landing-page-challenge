@@ -5,13 +5,18 @@ import classes from "./Footer.module.scss";
 
 const Footer = () => {
   return (
-    <div>
-      <h2>
-        Gracias por completar <span>el ejercicio</span>
-      </h2>
-      <p>Te invitamos ver mas informacion</p>
+    <div className={classes.footer}>
+      <div className={classes.footerText}>
+        <h1>
+          Gracias por{" "}
+          <span className={classes.blue}>completar el ejercicio</span>
+        </h1>
+        <span>Te invitamos ver mas informacion</span>
+      </div>
       <Button> Conocer mas</Button>
-      <img src={footerlogo} alt="logo" />
+      <div className={classes.logo}>
+        <img src={footerlogo} alt="logo" />
+      </div>
     </div>
   );
 };

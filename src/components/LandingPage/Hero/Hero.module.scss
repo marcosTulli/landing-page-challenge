@@ -1,0 +1,27 @@
+@import "../../../scss/variables.scss";
+
+.heroContainer {
+  padding: 1em;
+  .heading {
+    padding: 1em;
+    font-weight: 300;
+    font-size: 25px;
+    strong {
+      font-weight: 500;
+    }
+    span {
+      color: $woloxGreen;
+      font-weight: 600;
+    }
+  }
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+
+    .heroImage {
+      padding-top: 1em;
+      width: 150px;
+      height: 150px;
+    }
+  }
+}

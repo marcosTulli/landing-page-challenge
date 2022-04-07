@@ -6,21 +6,21 @@ import classes from "./Banner.module.scss";
 const Banner = () => {
   return (
     <div>
-      <div>
+      <div className={classes.banner}>
         <div className={classes.bannerImage}>
-          <h2>
-            <span>350 +</span>
-            <span>Woloxers</span>
-          </h2>
-          <div>
-            <BsTwitter /> <p>@Wolox</p>
+          <h1>
+            <span className={classes.green}>350 +</span>
+            <span className={classes.blue}>Woloxers</span>
+          </h1>
+          <div className={classes.twitterLogo}>
+            <BsTwitter /> <span>@Wolox</span>
           </div>
           <Button>Siguenos</Button>
         </div>
-        <div className={classes.bannerText}>
-          Trabajamos para <span>convertir</span>
-          <span>ideas</span> en productos
-        </div>
+        <h1 className={classes.bannerText}>
+          Trabajamos para <span className={classes.blue}>convertir</span>
+          <span className={classes.green}> ideas</span> en productos.
+        </h1>
       </div>
     </div>
   );

@@ -5,37 +5,55 @@ import workshop from "../../../assets/Ic_Workshops.svg";
 import snack from "../../../assets/Ic_DrinkSnacks.svg";
 import laptop from "../../../assets/Ic_laptop.svg";
 import brain from "../../../assets/Ic_brain.svg";
+import classes from "./Benefits.module.scss";
 
 const Benefits = () => {
   return (
-    <div>
-      <h2>
-        Entre nuestros beneficios se encuentran <span>;)</span>
-      </h2>
-      <ul>
-        <li>
-          <h3>Flexibilidad horaria</h3>
+    <div className={classes.benefits}>
+      <div className={classes.benefitsHeading}>
+        <h2>
+          Entre nuestros beneficios se encuentran
+          <span className={classes.blue}>;)</span>
+        </h2>
+      </div>
+      <ul className={classes.iconsGrid}>
+        <li className={classes.box}>
           <img src={clock} alt="flexibilidad horaria" />
+          <h3 className={classes.text}>
+            Flexibilidad <br />
+            horaria
+          </h3>
         </li>
-        <li>
-          <h3>Home Office</h3>
+        <li className={classes.box}>
           <img src={office} alt="Home Office" />
+          <h3 className={classes.text}>Home Office</h3>
         </li>
-        <li>
-          <h3>Capacitaciones y Workshops</h3>
+        <li className={classes.box}>
           <img src={workshop} alt="Capacitaciones y Workshops" />
+          <h3 className={classes.text}>
+            Capacitaciones <br />y Workshops
+          </h3>
         </li>
-        <li>
-          <h3>Snacks, frutas y bebidas gratis</h3>
+        <li className={classes.box}>
           <img src={snack} alt="Snacks, frutas y bebidas gratis" />
+          <h3 className={classes.text}>
+            Snacks, frutas <br />y bebidas gratis
+          </h3>
         </li>
-        <li>
-          <h3>Semana remota</h3>
+        <li className={classes.box}>
           <img src={laptop} alt="Semana remota" />
+          <h3 className={classes.text}>
+            Semana <br />
+            remota
+          </h3>
         </li>
-        <li>
-          <h3>Trabajar en ultimas tecnologias</h3>
+        <li className={classes.box}>
           <img src={brain} alt="Trabajar en ultimas tecnologias" />
+          <h3 className={classes.text}>
+            Trabajar <br />
+            en ultimas <br />
+            tecnologias
+          </h3>
         </li>
       </ul>
     </div>
