@@ -3,7 +3,7 @@ import classes from "./Button.module.scss";
 
 interface ButtonProps {
   children: ReactNode;
-  variant?: "base" | "primary" | "outlined";
+  variant?: "base" | "primary" | "outlined" | "outlinedBlue";
 }
 
 function getButtonStyles(variant: string) {

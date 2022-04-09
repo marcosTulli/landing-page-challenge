@@ -11,9 +11,11 @@ const Footer = () => {
           Gracias por{" "}
           <span className={classes.blue}>completar el ejercicio</span>
         </h1>
-        <span>Te invitamos ver mas informacion</span>
+        <h3>Te invitamos ver mas informacion</h3>
       </div>
-      <Button> Conocer mas</Button>
+      <div className={classes.aboutButton}>
+        <Button variant="primary"> Conocer mas</Button>
+      </div>
       <div className={classes.logo}>
         <img src={footerlogo} alt="logo" />
       </div>

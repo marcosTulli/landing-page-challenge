@@ -1,5 +1,5 @@
 import React from "react";
-// import { Button } from "../../Button";
+import { Button } from "../../Button";
 // import cx from 'classnames';
 import classes from "./Header.module.scss";
 import logo from "../../../assets/logo_full_color.svg";
@@ -16,12 +16,14 @@ const Header = () => {
           <li className={classes.listItem}>
             <MdMenu />
           </li>
-          {/* <li><Button variant="outlined">Inicio</Button></li>
-          <li>
-            <Button>Beneficios</Button>
+          {/* <li>
+            <Button variant="base">Inicio</Button>
           </li>
           <li>
-            <Button>Login</Button>
+            <Button variant="base">Beneficios</Button>
+          </li>
+          <li>
+            <Button variant="outlinedBlue">Login</Button>
           </li> */}
         </ul>
       </nav>

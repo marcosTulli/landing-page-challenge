@@ -9,13 +9,13 @@ const Banner = () => {
       <div className={classes.banner}>
         <div className={classes.bannerImage}>
           <h1>
-            <span className={classes.green}>350 +</span>
+            <span className={classes.green}>350 + </span>
             <span className={classes.blue}>Woloxers</span>
           </h1>
           <div className={classes.twitterLogo}>
             <BsTwitter /> <span>@Wolox</span>
           </div>
-          <Button>Siguenos</Button>
+          <Button variant="outlined">Siguenos</Button>
         </div>
         <h1 className={classes.bannerText}>
           Trabajamos para <span className={classes.blue}>convertir</span>

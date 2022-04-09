@@ -10,12 +10,10 @@ import classes from "./Benefits.module.scss";
 const Benefits = () => {
   return (
     <div className={classes.benefits}>
-      <div className={classes.benefitsHeading}>
-        <h2>
-          Entre nuestros beneficios se encuentran
-          <span className={classes.blue}>;)</span>
-        </h2>
-      </div>
+      <h2 className={classes.benefitsHeading}>
+        Entre nuestros beneficios se encuentran
+        <span className={classes.blue}> ;)</span>{" "}
+      </h2>
       <ul className={classes.iconsGrid}>
         <li className={classes.box}>
           <img src={clock} alt="flexibilidad horaria" />

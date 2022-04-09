@@ -1,11 +1,40 @@
+@import "../../scss/variables.scss";
+
 .base {
-  // TODO: BUILD THIS STYLES
+  border: none;
 }
 
 .primary {
-  // TODO: BUILD THIS STYLES
+  font-size: 8px;
+  font-weight: 900;
+  color: white;
+  border: none;
+  background-color: $woloxBlue2;
+  text-decoration: none;
+  padding: 0.6em 3em 0.6em 3em;
+  border-radius: 2em;
 }
 
 .outlined {
-  // TODO: BUILD THIS STYLES
+  color: white;
+  font-size: 9px;
+  font-weight: 900;
+  border-color: $woloxBlue;
+  border-style: solid;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 0.6em 5em 0.6em 5em;
+  border-radius: 2em;
+}
+
+.outlinedBlue {
+  font-size: 9px;
+  font-weight: 900;
+  border-color: $woloxBlue;
+  border-style: solid;
+  color: $woloxBlue;
+  background-color: white;
+  text-decoration: none;
+  padding: 0.6em 5em 0.6em 5em;
+  border-radius: 2em;
 }
