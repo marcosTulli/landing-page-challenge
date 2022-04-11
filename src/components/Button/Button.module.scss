@@ -1,40 +1,41 @@
-@import "../../scss/variables.scss";
+@import '../../scss/variables.scss';
+
+%sharedStyles {
+  font-size: 8px;
+  padding: 0.6em 5em 0.6em 5em;
+  border: 1px solid transparent;
+  text-decoration: none;
+  background-color: transparent;
+  font-weight: 900;
+  border-width: 1px;
+  border-radius: 2em;
+  border-style: solid;
+  color: white;
+  border-radius: 2em;
+  border-color: $woloxBlue;
+  @include tablet {
+    font-size: 15px;
+  }
+}
 
 .base {
+  @extend %sharedStyles;
+  color: black;
+  padding: 0.6em 2em 0.6em 2em;
   border: none;
 }
 
 .primary {
-  font-size: 8px;
-  font-weight: 900;
-  color: white;
-  border: none;
+  @extend %sharedStyles;
   background-color: $woloxBlue2;
-  text-decoration: none;
   padding: 0.6em 3em 0.6em 3em;
-  border-radius: 2em;
 }
 
 .outlined {
-  color: white;
-  font-size: 9px;
-  font-weight: 900;
-  border-color: $woloxBlue;
-  border-style: solid;
-  background-color: transparent;
-  text-decoration: none;
-  padding: 0.6em 5em 0.6em 5em;
-  border-radius: 2em;
+  @extend %sharedStyles;
 }
 
-.outlinedBlue {
-  font-size: 9px;
-  font-weight: 900;
-  border-color: $woloxBlue;
-  border-style: solid;
+.outlinedNav {
+  @extend %sharedStyles;
   color: $woloxBlue;
-  background-color: white;
-  text-decoration: none;
-  padding: 0.6em 5em 0.6em 5em;
-  border-radius: 2em;
 }

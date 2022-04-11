@@ -1,10 +1,17 @@
-@import "../../../scss/variables.scss";
+@import '../../../scss/variables.scss';
 
 .banner {
   padding-top: 1em;
-
+  @include tablet {
+    display: flex;
+    justify-content: space-around;
+  }
   .bannerImage {
-    background-image: url("../../../assets/img_woloxer.png");
+    @include tablet {
+      height: 300px;
+      width: 50%;
+    }
+    background-image: url('../../../assets/img_woloxer.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 250px;
@@ -26,6 +33,10 @@
   }
 
   .bannerText {
+    @include tablet {
+      height: 300px;
+      width: 50%;
+    }
     background-color: #f2f5fa;
     font-size: 1.5em;
     font-weight: 400;

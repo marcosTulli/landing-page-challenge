@@ -1,4 +1,4 @@
-@import "../../../scss/variables.scss";
+@import '../../../scss/variables.scss';
 
 .benefits {
   padding: 0.5em;
@@ -7,6 +7,13 @@
     font-weight: 500;
   }
   .benefitsHeading {
+    @include desktop {
+      font-size: 3em;
+    }
+    @include tablet {
+      font-size: 1.3em;
+    }
+    padding-top: 3em;
     font-size: 0.9em;
     width: 100%;
     font-weight: 600;
@@ -23,16 +30,16 @@
   .iconsGrid {
     padding-top: 2em;
     display: grid;
-    grid-template-columns: auto auto;
-    gap: 2em;
+    grid-template-columns: 31% 31% 31%;
+    gap: 1.5em;
     .box {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       img {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
       }
       .text {
         margin-top: 2em;
@@ -43,5 +50,10 @@
     h3 {
       justify-items: center;
     }
+  }
+  .divider {
+    padding-top: 4em;
+    display: flex;
+    justify-content: center;
   }
 }
