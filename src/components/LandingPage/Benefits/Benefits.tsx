@@ -6,15 +6,15 @@ import snack from '../../../assets/Ic_DrinkSnacks.svg';
 import laptop from '../../../assets/Ic_laptop.svg';
 import brain from '../../../assets/Ic_brain.svg';
 import classes from './Benefits.module.scss';
-import { Divider } from '../../Divider';
+// import { Divider } from '../../Divider';
 
 const Benefits = () => {
   return (
     <div className={classes.benefits}>
-      <h2 className={classes.benefitsHeading}>
-        Entre nuestros beneficios se encuentran
-        <span className={classes.blue}> ;)</span>{' '}
-      </h2>
+      <div className={classes.benefitsHeading}>
+        Entre los beneficios que ofrecemos se encuentran{' '}
+        <span className={classes.blue}> ;)</span>
+      </div>
       <ul className={classes.iconsGrid}>
         <li className={classes.box}>
           <img src={clock} alt='flexibilidad horaria' />
@@ -55,9 +55,6 @@ const Benefits = () => {
           </h3>
         </li>
       </ul>
-      {/* <div className={classes.divider}>
-        <Divider />
-      </div> */}
     </div>
   );
 };

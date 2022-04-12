@@ -11,12 +11,18 @@
     flex-direction: column;
     align-items: center;
     h1 {
+      @include desktop {
+        font-size: 30px;
+      }
       @include tablet {
         font-size: 23px;
       }
       font-size: 18px;
     }
     h3 {
+      @include desktop {
+        font-size: 23px;
+      }
       @include tablet {
         font-size: 17px;
       }
@@ -35,6 +41,9 @@
   .logo {
     padding-top: 2em;
     img {
+      @include desktop {
+        width: 80px;
+      }
       width: 60px;
     }
   }

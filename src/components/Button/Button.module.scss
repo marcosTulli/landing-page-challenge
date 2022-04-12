@@ -6,7 +6,7 @@
   border: 1px solid transparent;
   text-decoration: none;
   background-color: transparent;
-  font-weight: 900;
+  font-weight: bold;
   border-width: 1px;
   border-radius: 2em;
   border-style: solid;
@@ -14,7 +14,10 @@
   border-radius: 2em;
   border-color: $woloxBlue;
   @include tablet {
-    font-size: 15px;
+    font-size: 14px;
+  }
+  @include desktop {
+    font-size: 18px;
   }
 }
 
@@ -23,6 +26,9 @@
   color: black;
   padding: 0.6em 2em 0.6em 2em;
   border: none;
+  @include desktop {
+    padding: 0.6em 1em 0.6em 1em;
+  }
 }
 
 .primary {

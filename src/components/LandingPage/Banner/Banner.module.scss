@@ -1,14 +1,21 @@
 @import '../../../scss/variables.scss';
-
 .banner {
   padding-top: 1em;
   @include tablet {
     display: flex;
     justify-content: space-around;
   }
+  @include desktop {
+    display: flex;
+    justify-content: space-around;
+  }
   .bannerImage {
     @include tablet {
       height: 300px;
+      width: 50%;
+    }
+    @include desktop {
+      height: 320px;
       width: 50%;
     }
     background-image: url('../../../assets/img_woloxer.png');
@@ -35,6 +42,10 @@
   .bannerText {
     @include tablet {
       height: 300px;
+      width: 50%;
+    }
+    @include desktop {
+      height: 320px;
       width: 50%;
     }
     background-color: #f2f5fa;

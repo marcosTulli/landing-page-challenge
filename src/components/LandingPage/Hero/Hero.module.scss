@@ -54,3 +54,30 @@
     }
   }
 }
+
+@include desktop {
+  .heroContainer {
+    display: flex;
+    justify-content: space-around;
+    .heading {
+      padding: 1em;
+      font-weight: 300;
+      font-size: 25px;
+
+      strong {
+        font-weight: 500;
+      }
+      span {
+        color: $woloxGreen;
+        font-weight: 600;
+      }
+    }
+    .imageContainer {
+      .heroImage {
+        padding-top: 1em;
+        width: 280px;
+        height: 280px;
+      }
+    }
+  }
+}
