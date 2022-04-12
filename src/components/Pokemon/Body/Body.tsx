@@ -1,13 +1,50 @@
 import React from 'react';
+import classes from './Body.module.scss';
+import { Card } from '../Card';
+import { Pagination } from '../Pagination';
 
-const Body = () => {
+interface BodyProps {
+  className?: string;
+}
+
+const Body: React.FC<BodyProps> = () => {
   return (
-    <>
-      <div>Squirtle</div>
-      <div>Pikachu</div>
-      <div>Eve</div>
-      <div>Bullbazord</div>
-    </>
+    <div className={classes.container}>
+      <div className={classes.inputContainer}>
+        <form>
+          <input type='text' placeholder='Search your pokemon' autoFocus />
+        </form>
+      </div>
+      <div className={classes.cardDisplay}>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
+      <Pagination />
+    </div>
   );
 };
 

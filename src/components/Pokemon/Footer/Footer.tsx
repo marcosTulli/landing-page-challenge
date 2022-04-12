@@ -1,9 +1,16 @@
 import React from 'react';
+import classes from './Footer.module.scss';
 
-const Footer = () => {
+interface FooterProps {
+  className?: string;
+}
+
+const Footer: React.FC<FooterProps> = ({ className }) => {
   return (
     <>
-      <div>Pokemon Footer</div>
+      <div className={classes.container}>
+        <p>Pokemon Footer</p>
+      </div>
     </>
   );
 };

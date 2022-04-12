@@ -1,12 +1,15 @@
+import classes from './PokemonSearch.module.scss';
 import React from 'react';
 import { Header, Body, Footer } from '../../components/Pokemon/Index';
 
 const PokemonIndex = () => {
   return (
     <>
-      <Header />
-      <Body />
-      <Footer />
+      <div>
+        <Header />
+        <Body />
+        <Footer />
+      </div>
     </>
   );
 };

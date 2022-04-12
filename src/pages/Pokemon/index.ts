@@ -1,1 +1,1 @@
-export { default as PokemonIndex } from './PokemonIndex';
+export { default as PokemonSearch } from './PokemonSearch';

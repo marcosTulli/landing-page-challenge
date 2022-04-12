@@ -2,7 +2,7 @@ import React from 'react';
 import 'normalize.css';
 import './App.scss';
 import { Landing } from './pages/Landing';
-import { PokemonIndex } from './pages/Pokemon';
+import { PokemonSearch } from './pages/Pokemon';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
           <div>
             <Routes>
               <Route path='/' element={<Landing />} />
-              <Route path='/Pokemons' element={<PokemonIndex />} />
+              <Route path='/Pokemons' element={<PokemonSearch />} />
             </Routes>
           </div>
         </Router>

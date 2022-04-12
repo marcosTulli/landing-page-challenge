@@ -1,0 +1,45 @@
+BEGIN:VCALENDAR
+PRODID:-//zoom.us//iCalendar Event//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+CLASS:PUBLIC
+BEGIN:VTIMEZONE
+TZID:America/Argentina/Buenos_Aires
+LAST-MODIFIED:20220317T223602Z
+TZURL:http://tzurl.org/zoneinfo-outlook/America/Argentina/Buenos_Aires
+X-LIC-LOCATION:America/Argentina/Buenos_Aires
+BEGIN:STANDARD
+TZNAME:-03
+TZOFFSETFROM:-0300
+TZOFFSETTO:-0300
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20220412T184401Z
+DTSTART;TZID=America/Argentina/Buenos_Aires:20220413T100000
+DTEND;TZID=America/Argentina/Buenos_Aires:20220413T120000
+SUMMARY:CURSO DE REACT UTN - SOFTEK
+EXDATE;TZID=America/Argentina/Buenos_Aires:20220415T100000
+RRULE:FREQ=WEEKLY;WKST=SU;UNTIL=20220513T150000;INTERVAL=1;BYDAY=MO,WE,FR
+ 
+UID:ZOOM89709653555
+TZID:America/Argentina/Buenos_Aires
+DESCRIPTION:FORMACION UTN-BA is inviting you to a scheduled Zoom meeting.
+ \n\nJoin Zoom Meeting\nhttps://utn.zoom.us/j/89709653555\n\nMeeting ID: 
+ 897 0965 3555\nOne tap mobile\n+541159836950\,\,89709653555# Argentina\n
+ +543415122188\,\,89709653555# Argentina\n\nDial by your location\n      
+   +54 115 983 6950 Argentina\n        +54 341 512 2188 Argentina\n      
+   +54 343 414 5986 Argentina\n        +54 112 040 0447 Argentina\nMeetin
+ g ID: 897 0965 3555\nFind your local number: https://utn.zoom.us/u/kcNGw
+ xg7IO\n\nJoin by Skype for Business\nhttps://utn.zoom.us/skype/897096535
+ 55\n\n
+LOCATION:https://utn.zoom.us/j/89709653555
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR
