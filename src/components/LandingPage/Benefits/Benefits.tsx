@@ -13,7 +13,7 @@ const Benefits = () => {
     <div className={classes.benefits}>
       <div className={classes.benefitsHeading}>
         Entre los beneficios que ofrecemos se encuentran{' '}
-        <span className={classes.blue}> ;)</span>
+        <b className={classes.blue}> ;)</b>
       </div>
       <ul className={classes.iconsGrid}>
         <li className={classes.box}>
