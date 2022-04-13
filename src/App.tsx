@@ -4,6 +4,7 @@ import './App.scss';
 import { Landing } from './pages/Landing';
 import { PokemonSearch } from './pages/Pokemon';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import Apitest from './components/apitest';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         </Router>
       </React.Fragment>
     </>
+    // <Apitest />
   );
 };
 
