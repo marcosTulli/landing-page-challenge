@@ -1,15 +1,13 @@
 import React from 'react';
 import { Header, Body, Footer } from '../../components/Pokemon/Index';
-import pokemonList from './pokemonsList.json';
-
-// console.log('pokemonList', pokemonList);
+import { Pokemons } from '../Pokemons';
 
 const PokemonIndex = () => {
   return (
     <>
       <div>
         <Header />
-        <Body />
+        <Body pokemons={Pokemons} />
         <Footer />
       </div>
     </>

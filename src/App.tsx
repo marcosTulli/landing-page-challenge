@@ -1,23 +1,26 @@
 import React from "react";
+import { QueryClient, QueryClientProvider } from "react-query";
 import "normalize.css";
 import "./App.scss";
 import { Landing } from "./pages/Landing";
-import { PokemonSearch } from "./pages/Pokemon";
+import { Pokemons } from "./pages/Pokemons";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import Apitest from './components/apitest';
+
+export const queryClient = new QueryClient();
 
 const App = () => {
   return (
     <>
       <React.Fragment>
-        <Router>
-          <div>
+        <QueryClientProvider client={queryClient}>
+          <Router>
             <Routes>
               <Route path="/" element={<Landing />} />
-              <Route path="/pokemons" element={<PokemonSearch />} />
+              <Route path="/pokemons" element={<Pokemons />} />
             </Routes>
-          </div>
-        </Router>
+          </Router>
+        </QueryClientProvider>
       </React.Fragment>
     </>
     // <Apitest />

@@ -6,41 +6,19 @@ import { Input } from '../../Input';
 
 interface BodyProps {
   className?: string;
+  pokemons: any;
 }
 
-const Body: React.FC<BodyProps> = () => {
+const Body: React.FC<BodyProps> = ({ pokemons }) => {
   return (
     <div className={classes.container}>
       <div className={classes.inputContainer}>
         <Input />
       </div>
       <div className={classes.cardDisplay}>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {pokemons.map((pokemon: any) => (
+          <Card key={pokemon.id} pokemon={pokemon} />
+        ))}
       </div>
       <Pagination />
     </div>
