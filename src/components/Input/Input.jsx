@@ -24,6 +24,7 @@ const Input = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
+
   const handleClickOutside = (e) => {
     const { current: wrap } = wrapperRef;
     if (wrap && !wrap?.contains(e.target)) {
@@ -43,7 +44,9 @@ const Input = () => {
         onClick={() => setDisplay(!display)}
         placeholder='Type to search'
         value={search}
-        onChange={(e) => setSearch(e.target.value)}
+        onChange={(e) => {
+          setSearch(e.target.value);
+        }}
       />
       {display && (
         <div>
