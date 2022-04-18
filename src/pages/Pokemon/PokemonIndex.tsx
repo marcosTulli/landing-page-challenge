@@ -1,13 +1,13 @@
 import React from 'react';
-import { Header, Body, Footer } from '../../components/Pokemon/Index';
-import { Pokemons } from '../Pokemons';
+import classes from './PokemonIndex.module.scss';
+import { Header, Footer, PokemonDisplay } from '../../components/Pokemon/Index';
 
 const PokemonIndex = () => {
   return (
     <>
       <div>
         <Header />
-        <Body pokemons={Pokemons} />
+        <PokemonDisplay />
         <Footer />
       </div>
     </>
