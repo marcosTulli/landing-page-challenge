@@ -18,7 +18,7 @@ const App = () => {
             <Routes>
               <Route path='/' element={<Landing />} />
               <Route path='/pokemons' element={<Pokemons />} />
-              <Route path='/pokemon:id' element={<PokemonId />} />
+              <Route path='/pokemons/:id' element={<PokemonId />} />
             </Routes>
           </Router>
         </QueryClientProvider>
