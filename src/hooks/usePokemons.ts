@@ -49,7 +49,7 @@ const getPokemons = async (list: number[]) => {
   return result;
 };
 
-const usePokemon = (id: number) =>
+export const usePokemon = (id: number) =>
   useQuery(`pokemons/${id}`, () => fetchPokemon(id));
 
 export default usePokemons;
