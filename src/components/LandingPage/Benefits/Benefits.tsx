@@ -8,59 +8,69 @@ import brain from '../../../assets/Ic_brain.svg';
 import classes from './Benefits.module.scss';
 // import { Divider } from '../../Divider';
 
-interface BenefitsProps {
-  ref?: any;
-}
+interface BenefitsProps {}
 
-const Benefits: React.FC<BenefitsProps> = ({ ref }) => {
-  return (
-    <div className={classes.benefits} ref={ref}>
-      <div className={classes.benefitsHeading}>
-        Entre los beneficios que ofrecemos se encuentran{' '}
-        <b className={classes.blue}> ;)</b>
-      </div>
-      <ul className={classes.iconsGrid}>
-        <li className={classes.box}>
-          <img src={clock} alt='flexibilidad horaria' />
-          <h3 className={classes.text}>
-            Flexibilidad <br />
-            horaria
-          </h3>
-        </li>
-        <li className={classes.box}>
-          <img src={office} alt='Home Office' />
-          <h3 className={classes.text}>Home Office</h3>
-        </li>
-        <li className={classes.box}>
-          <img src={workshop} alt='Capacitaciones y Workshops' />
-          <h3 className={classes.text}>
-            Capacitaciones <br />y Workshops
-          </h3>
-        </li>
-        <li className={classes.box}>
-          <img src={snack} alt='Snacks, frutas y bebidas gratis' />
-          <h3 className={classes.text}>
-            Snacks, frutas <br />y bebidas gratis
-          </h3>
-        </li>
-        <li className={classes.box}>
-          <img src={laptop} alt='Semana remota' />
-          <h3 className={classes.text}>
-            Semana <br />
-            remota
-          </h3>
-        </li>
-        <li className={classes.box}>
-          <img src={brain} alt='Trabajar en ultimas tecnologias' />
-          <h3 className={classes.text}>
-            Trabajar <br />
-            en ultimas <br />
-            tecnologias
-          </h3>
-        </li>
-      </ul>
-    </div>
-  );
-};
+const Benefits: React.FC<BenefitsProps> = () => (
+  <div id="landing-benefits" className={classes.benefits}>
+    <h2 className={classes.benefitsHeading}>
+      Entre los beneficios que ofrecemos se encuentran
+      <b className={classes.blue}> ;)</b>
+    </h2>
+    <ul className={classes.iconsGrid}>
+      <li className={classes.box}>
+        <img src={clock} alt="flexibilidad horaria" />
+        <h3 className={classes.text}>
+          Flexibilidad
+          {' '}
+          <br />
+          horaria
+        </h3>
+      </li>
+      <li className={classes.box}>
+        <img src={office} alt="Home Office" />
+        <h3 className={classes.text}>Home Office</h3>
+      </li>
+      <li className={classes.box}>
+        <img src={workshop} alt="Capacitaciones y Workshops" />
+        <h3 className={classes.text}>
+          Capacitaciones
+          {' '}
+          <br />
+          y Workshops
+        </h3>
+      </li>
+      <li className={classes.box}>
+        <img src={snack} alt="Snacks, frutas y bebidas gratis" />
+        <h3 className={classes.text}>
+          Snacks, frutas
+          {' '}
+          <br />
+          y bebidas gratis
+        </h3>
+      </li>
+      <li className={classes.box}>
+        <img src={laptop} alt="Semana remota" />
+        <h3 className={classes.text}>
+          Semana
+          {' '}
+          <br />
+          remota
+        </h3>
+      </li>
+      <li className={classes.box}>
+        <img src={brain} alt="Trabajar en ultimas tecnologias" />
+        <h3 className={classes.text}>
+          Trabajar
+          {' '}
+          <br />
+          en ultimas
+          {' '}
+          <br />
+          tecnologias
+        </h3>
+      </li>
+    </ul>
+  </div>
+);
 
 export default Benefits;

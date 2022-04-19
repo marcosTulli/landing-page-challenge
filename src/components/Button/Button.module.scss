@@ -1,4 +1,4 @@
-@import '../../scss/variables.scss';
+@import "../../scss/variables.scss";
 
 %sharedStyles {
   font-size: 8px;
@@ -13,6 +13,12 @@
   color: white;
   border-radius: 2em;
   border-color: $woloxBlue;
+  outline: none !important;
+  transition: all 0.2 ease-out 0.5;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
   @include tablet {
     font-size: 14px;
   }

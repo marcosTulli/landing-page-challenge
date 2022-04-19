@@ -5,11 +5,11 @@ import { Header, Body, Footer } from '../../components/Pokemon/Index';
 // import pokemonList from "./pokemonsList.json";
 import usePokemons from '../../hooks/usePokemons';
 
-const Pokemons = () => {
+function Pokemons() {
   const {
     data: { pokemons, count, nextQuery },
   } = usePokemons({});
-
+  // TODO: implement pagination with nextQuery data
   return (
     <>
       <Header />
@@ -17,6 +17,6 @@ const Pokemons = () => {
       <Footer />
     </>
   );
-};
+}
 
 export default Pokemons;

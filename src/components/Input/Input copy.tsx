@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 // interface PokemonFormResponse {
 //   name: string;
 // }
-const Input = () => {
+function Input() {
   // const [display, setDisplay] = useState(false);
   // const [options, setOptions] = useState<PokemonFormResponse[]>([]);
   // const [search, setSearch] = useState('');
@@ -68,6 +68,6 @@ const Input = () => {
       )} */}
     </div>
   );
-};
+}
 
 export default Input;

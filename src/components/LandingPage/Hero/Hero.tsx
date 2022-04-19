@@ -1,13 +1,18 @@
-import React from "react";
-import classes from "./Hero.module.scss";
-import heroImage from "../../../assets/hero/Ic_ilustra_Hero.png";
+import React from 'react';
+import heroImage from '../../../assets/hero/Ic_ilustra_Hero.png';
+import classes from './Hero.module.scss';
 
-const Hero = () => {
+function Hero() {
   return (
     <div className={classes.heroContainer}>
       <h1 className={classes.heading}>
-        Bienvenido a tu <br />
-        <strong>Entrevista Técnica</strong> en <br />
+        Bienvenido a tu
+        {' '}
+        <br />
+        <strong>Entrevista Técnica</strong>
+        {' '}
+        en
+        <br />
         <span>Wolox</span>
       </h1>
       <div className={classes.imageContainer}>
@@ -15,6 +20,6 @@ const Hero = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Hero;

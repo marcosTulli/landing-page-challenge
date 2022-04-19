@@ -1,8 +1,8 @@
 import React from 'react';
-import classes from './Pagination.module.scss';
 import { MdArrowBackIosNew, MdArrowForwardIos } from 'react-icons/md';
+import classes from './Pagination.module.scss';
 
-const Pagination = () => {
+function Pagination() {
   return (
     <div className={classes.container}>
       <MdArrowBackIosNew className={classes.arrow} />
@@ -10,6 +10,6 @@ const Pagination = () => {
       <MdArrowForwardIos className={classes.arrow} />
     </div>
   );
-};
+}
 
 export default Pagination;

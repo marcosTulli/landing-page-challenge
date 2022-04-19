@@ -1,10 +1,9 @@
 import React from 'react';
 import { BsTwitter } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
 import { Button } from '../../Button';
 import classes from './Banner.module.scss';
 
-const Banner = () => {
+function Banner() {
   return (
     <div>
       <div className={classes.banner}>
@@ -14,19 +13,25 @@ const Banner = () => {
             <span className={classes.blue}>Woloxers</span>
           </h1>
           <div className={classes.twitterLogo}>
-            <BsTwitter /> <span>@Wolox</span>
+            <BsTwitter />
+            {' '}
+            <span>@Wolox</span>
           </div>
-          <Link to={{ pathname: 'https://twitter.com/wolox' }} target='_blank'>
-            <Button variant='outlined'>Siguenos</Button>
-          </Link>
+          <a rel="noreferrer" href="https://twitter.com/wolox" target="_blank">
+            <Button variant="outlined">Siguenos</Button>
+          </a>
         </div>
         <h1 className={classes.bannerText}>
-          Trabajamos para <span className={classes.blue}>convertir</span>
-          <span className={classes.green}> ideas</span> en productos.
+          Trabajamos para
+          {' '}
+          <span className={classes.blue}>convertir</span>
+          <span className={classes.green}> ideas</span>
+          {' '}
+          en productos.
         </h1>
       </div>
     </div>
   );
-};
+}
 
 export default Banner;

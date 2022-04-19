@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useQuery } from 'react-query';
 import queryString from 'query-string';
+import { Pokemon } from '../types';
 import { fetchPokemons, fetchPokemon } from '../utils/api';
 import { queryClient } from '../App';
 
@@ -8,14 +9,21 @@ interface usePokemonProps {
   limit?: number;
   offset?: number;
 }
-const usePokemons = ({ limit = 20, offset = 20 }: usePokemonProps) => {
+type usePokemonsReturn = {
+  data: {
+    pokemons: Pokemon[];
+    count: number;
+    nextQuery: { limit?: string; offset?: string };
+  };
+  loading: boolean;
+};
+const usePokemons = ({
+  limit = 20,
+  offset = 20,
+}: usePokemonProps): usePokemonsReturn => {
   const [pokemonList, setPokemonList] = React.useState<any>([]);
-  const result = useQuery(['pokemons', limit, offset], () =>
-    fetchPokemons({ limit, offset })
-  );
-  const list = result?.data?.data?.results.map((el: any) =>
-    Number(el.url.split('/').slice(-2)[0])
-  );
+  const result = useQuery(['pokemons', limit, offset], () => fetchPokemons({ limit, offset }));
+  const list = result?.data?.data?.results.map((el: any) => Number(el.url.split('/').slice(-2)[0]));
 
   useEffect(() => {
     const fetchPokemons = async () => {
@@ -25,7 +33,7 @@ const usePokemons = ({ limit = 20, offset = 20 }: usePokemonProps) => {
     fetchPokemons();
   }, [result?.data?.data]);
 
-  const nextQuery = queryString.parseUrl(result.data?.data?.next ?? '').query;
+  const nextQuery = queryString.parseUrl(result.data?.data?.next ?? '')?.query;
 
   return {
     data: {
@@ -33,23 +41,20 @@ const usePokemons = ({ limit = 20, offset = 20 }: usePokemonProps) => {
       count: result.data?.data.count,
       nextQuery,
     },
-    loading: queryClient.isFetching(),
+    loading: Boolean(queryClient.isFetching()),
   };
 };
 
-const getPokemons = async (list: number[]) => {
+const getPokemons = async (list: number[]): Promise<Pokemon[]> => {
   if (!list) return [];
-  let result = [];
-  for await (let id of list) {
-    const pokemon: any = await queryClient.fetchQuery(`pokemons/${id}`, () =>
-      fetchPokemon(id)
-    );
+  const result: Pokemon[] = [];
+  for await (const id of list) {
+    const pokemon: any = await queryClient.fetchQuery(`pokemons/${id}`, () => fetchPokemon(id));
     result.push(pokemon.data);
   }
   return result;
 };
 
-export const usePokemon = (id: number) =>
-  useQuery(`pokemons/${id}`, () => fetchPokemon(id));
+export const usePokemon = (id: number) => useQuery(`pokemons/${id}`, () => fetchPokemon(id));
 
 export default usePokemons;

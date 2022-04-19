@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import {
   Header,
   Hero,
@@ -8,17 +8,16 @@ import {
 } from '../../components/LandingPage';
 import classes from './Landing.module.scss';
 
-const Landing = () => {
-  const benefitRef = useRef();
+function Landing() {
   return (
     <div className={classes.container}>
       <Header />
       <Hero />
       <Banner />
-      <Benefits ref={benefitRef} />
+      <Benefits />
       <Footer />
     </div>
   );
-};
+}
 
 export default Landing;

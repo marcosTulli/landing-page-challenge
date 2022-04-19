@@ -5,7 +5,7 @@ interface PokemonProps {
   pokemon: any;
 }
 
-const PokemonDisplay = ({ pokemon }: PokemonProps) => {
+function PokemonDisplay({ pokemon }: PokemonProps) {
   console.log(' pokemon', pokemon);
   return (
     <div className={classes.container}>
@@ -17,21 +17,17 @@ const PokemonDisplay = ({ pokemon }: PokemonProps) => {
         <span className={classes.name}>{pokemon.name}</span>
         <h2>Abilities</h2>
         <span className={classes.description}>
-          {pokemon.abilities.map((x: any) => {
-            return <div>{x.ability.name}</div>;
-          })}
+          {pokemon.abilities.map((x: any) => <div>{x.ability.name}</div>)}
         </span>
         <h2>Weight</h2>
         <span className={classes.description}>{pokemon.weight}</span>
         <h2>Held Items</h2>
         <span className={classes.description}>
-          {pokemon.held_items.map((x: any) => {
-            return x.item.name ? <div>{x.item.name}</div> : <div> None</div>;
-          })}
+          {pokemon.held_items.map((x: any) => (x.item.name ? <div>{x.item.name}</div> : <div> None</div>))}
         </span>
       </div>
     </div>
   );
-};
+}
 
 export default PokemonDisplay;

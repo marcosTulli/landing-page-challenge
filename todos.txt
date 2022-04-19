@@ -1,3 +1,6 @@
-Fix banner text: Move ideas next to convertir 
-Fix benefits text: Move :) next to encuentran
-FIx: mobile margin
+Aspectos a mejorar/terminar: 
+- Paginación (routing con limit y offset) seleccionando la cantidad de elemtnos por página
+- Wave effect de Button onClick
+- Implementar test unitarios
+- Implementar internacionalización. https://react.i18next.com/
+- Fixear errores de linter (solo setup)

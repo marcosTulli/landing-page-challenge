@@ -1,17 +1,18 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from 'react';
+import { Pokemon } from '../../types';
 
 interface Props {
-  pokemons: any;
+  pokemons: Pokemon[];
 }
 const Input: React.FC<Props> = (props: Props) => {
   const [display, setDisplay] = useState(false);
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState('');
   const wrapperRef = useRef<any>(null);
 
   useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
 
@@ -43,31 +44,29 @@ const Input: React.FC<Props> = (props: Props) => {
       {display && (
         <div
           style={{
-            position: "absolute",
-            background: "white",
-            boxShadow: "1px 4px 18px 0px grey",
+            position: 'absolute',
+            background: 'white',
+            boxShadow: '1px 4px 18px 0px grey',
             borderRadius: 2,
             width: 200,
             maxHeight: 300,
-            overflowY: "scroll",
+            overflowY: 'scroll',
           }}
         >
           {props.pokemons
             .filter(
-              (pokemon: any) => pokemon.name.indexOf(search.toLowerCase()) > -1
+              (pokemon: any) => pokemon.name.indexOf(search.toLowerCase()) > -1,
             )
-            .map((value: any) => {
-              return (
-                <div
-                  onClick={() => setPokedex(value.name)}
-                  className="option"
-                  key={value.id}
-                  tabIndex={0}
-                >
-                  <span>{value.name}</span>
-                </div>
-              );
-            })}
+            .map((value: any) => (
+              <div
+                onClick={() => setPokedex(value.name)}
+                className="option"
+                key={value.id}
+                tabIndex={0}
+              >
+                <span>{value.name}</span>
+              </div>
+            ))}
         </div>
       )}
     </div>
