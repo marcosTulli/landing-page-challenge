@@ -1,18 +1,18 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { Pokemon } from '../../types';
+import React, { useEffect, useState, useRef } from "react";
+import { Pokemon } from "../../types";
 
 interface Props {
   pokemons: Pokemon[];
 }
-const Input: React.FC<Props> = (props: Props) => {
+const Input: React.FC<Props> = ({ pokemons }: Props) => {
   const [display, setDisplay] = useState(false);
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
   const wrapperRef = useRef<any>(null);
 
   useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
@@ -44,25 +44,25 @@ const Input: React.FC<Props> = (props: Props) => {
       {display && (
         <div
           style={{
-            position: 'absolute',
-            background: 'white',
-            boxShadow: '1px 4px 18px 0px grey',
+            position: "absolute",
+            background: "white",
+            boxShadow: "1px 4px 18px 0px grey",
             borderRadius: 2,
             width: 200,
             maxHeight: 300,
-            overflowY: 'scroll',
+            overflowY: "scroll",
           }}
         >
-          {props.pokemons
+          {pokemons
             .filter(
               (pokemon: any) => pokemon.name.indexOf(search.toLowerCase()) > -1,
             )
             .map((value: any) => (
+              // eslint-disable-next-line
               <div
                 onClick={() => setPokedex(value.name)}
                 className="option"
                 key={value.id}
-                tabIndex={0}
               >
                 <span>{value.name}</span>
               </div>

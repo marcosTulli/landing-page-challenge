@@ -1,9 +1,9 @@
-import React from 'react';
-import cx from 'classnames';
-import { Link } from 'react-router-dom';
-import { Button } from '../../Button';
-import pokeball from '../../../assets/poke.png';
-import classes from './Header.module.scss';
+import React from "react";
+import cx from "classnames";
+import { Link } from "react-router-dom";
+import { Button } from "../../Button";
+import pokeball from "../../../assets/poke.png";
+import classes from "./Header.module.scss";
 
 interface HearderProps {
   className?: string;
@@ -22,5 +22,9 @@ const Header: React.FC<HearderProps> = ({ className }) => (
     </div>
   </div>
 );
+
+Header.defaultProps = {
+  className: "",
+};
 
 export default Header;

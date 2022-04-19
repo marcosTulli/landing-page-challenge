@@ -1,12 +1,11 @@
-import React from 'react';
-import { Pokemon } from '../../../types';
-import { Card } from '../Card';
-import { Pagination } from '../Pagination';
-import { Input } from '../../Input';
-import classes from './Body.module.scss';
+import React from "react";
+import { Pokemon } from "../../../types";
+import { Card } from "../Card";
+import { Pagination } from "../Pagination";
+import { Input } from "../../Input";
+import classes from "./Body.module.scss";
 
 interface BodyProps {
-  className?: string;
   pokemons: Pokemon[];
 }
 
@@ -23,5 +22,4 @@ const Body: React.FC<BodyProps> = ({ pokemons }) => (
     <Pagination />
   </div>
 );
-
 export default Body;

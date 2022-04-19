@@ -1,12 +1,11 @@
-import React from 'react';
-import classes from './PokemonDisplay.module.scss';
+import React from "react";
+import classes from "./PokemonDisplay.module.scss";
 
 interface PokemonProps {
   pokemon: any;
 }
 
 function PokemonDisplay({ pokemon }: PokemonProps) {
-  console.log(' pokemon', pokemon);
   return (
     <div className={classes.container}>
       <div className={classes.picture}>
@@ -17,7 +16,9 @@ function PokemonDisplay({ pokemon }: PokemonProps) {
         <span className={classes.name}>{pokemon.name}</span>
         <h2>Abilities</h2>
         <span className={classes.description}>
-          {pokemon.abilities.map((x: any) => <div>{x.ability.name}</div>)}
+          {pokemon.abilities.map((x: any) => (
+            <div>{x.ability.name}</div>
+          ))}
         </span>
         <h2>Weight</h2>
         <span className={classes.description}>{pokemon.weight}</span>

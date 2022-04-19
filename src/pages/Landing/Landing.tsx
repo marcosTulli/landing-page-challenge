@@ -1,12 +1,11 @@
-import React from 'react';
 import {
   Header,
   Hero,
   Banner,
   Benefits,
   Footer,
-} from '../../components/LandingPage';
-import classes from './Landing.module.scss';
+} from "../../components/LandingPage";
+import classes from "./Landing.module.scss";
 
 function Landing() {
   return (

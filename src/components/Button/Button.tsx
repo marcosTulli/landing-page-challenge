@@ -1,11 +1,10 @@
-import React, { ReactNode } from 'react';
-import classes from './Button.module.scss';
+import React, { ReactNode } from "react";
+import classes from "./Button.module.scss";
 
 interface ButtonProps {
   children: ReactNode;
-  variant?: 'base' | 'primary' | 'outlined' | 'outlinedNav';
+  variant?: "base" | "primary" | "outlined" | "outlinedNav";
   onClick?: () => void;
-  className?: any;
 }
 
 function getButtonStyles(variant: string) {
@@ -14,15 +13,20 @@ function getButtonStyles(variant: string) {
 
 const Button: React.FC<ButtonProps> = ({
   children,
-  variant = 'primary',
+  variant = "primary",
   onClick,
 }) => {
   const className = getButtonStyles(variant);
   return (
-    <button onClick={onClick} className={className}>
+    <button type="button" onClick={onClick} className={className}>
       {children}
     </button>
   );
+};
+
+Button.defaultProps = {
+  variant: "primary",
+  onClick: () => {},
 };
 
 export default Button;
