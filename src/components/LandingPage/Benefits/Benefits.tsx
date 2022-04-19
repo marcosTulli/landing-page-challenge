@@ -8,9 +8,13 @@ import brain from '../../../assets/Ic_brain.svg';
 import classes from './Benefits.module.scss';
 // import { Divider } from '../../Divider';
 
-const Benefits = () => {
+interface BenefitsProps {
+  ref?: any;
+}
+
+const Benefits: React.FC<BenefitsProps> = ({ ref }) => {
   return (
-    <div className={classes.benefits}>
+    <div className={classes.benefits} ref={ref}>
       <div className={classes.benefitsHeading}>
         Entre los beneficios que ofrecemos se encuentran{' '}
         <b className={classes.blue}> ;)</b>

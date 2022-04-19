@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import {
   Header,
   Hero,
@@ -9,12 +9,13 @@ import {
 import classes from './Landing.module.scss';
 
 const Landing = () => {
+  const benefitRef = useRef();
   return (
     <div className={classes.container}>
       <Header />
       <Hero />
       <Banner />
-      <Benefits />
+      <Benefits ref={benefitRef} />
       <Footer />
     </div>
   );

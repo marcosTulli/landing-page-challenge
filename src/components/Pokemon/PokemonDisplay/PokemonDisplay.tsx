@@ -1,14 +1,9 @@
 import React from 'react';
 import classes from './PokemonDisplay.module.scss';
-import charmander from '../../../assets/charmander.png';
 
 interface PokemonProps {
   pokemon: any;
 }
-// [
-//     {
-//         "item": {
-//             "name": "sharp-beak",
 
 const PokemonDisplay = ({ pokemon }: PokemonProps) => {
   console.log(' pokemon', pokemon);

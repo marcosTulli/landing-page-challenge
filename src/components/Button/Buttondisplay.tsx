@@ -1,12 +1,19 @@
-import React from "react";
-import Button from "./Button";
+import React from 'react';
+import Botones from './Button copy';
 
 const Buttons = () => {
   return (
     <>
-      <Button variant="base">Hey</Button>
-      <Button variant="outlined">Login</Button>
-      <Button variant="primary">Login</Button>
+      <Botones onClick={() => console.log('americana')} variant='base'>
+        Hey
+      </Botones>
+      <Botones
+        onClick={() => {
+          console.log('sanguango');
+        }}
+        variant='primary'>
+        Login
+      </Botones>
     </>
   );
 };

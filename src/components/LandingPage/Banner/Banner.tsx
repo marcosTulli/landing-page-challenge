@@ -1,7 +1,8 @@
-import React from "react";
-import { BsTwitter } from "react-icons/bs";
-import { Button } from "../../Button";
-import classes from "./Banner.module.scss";
+import React from 'react';
+import { BsTwitter } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
+import { Button } from '../../Button';
+import classes from './Banner.module.scss';
 
 const Banner = () => {
   return (
@@ -15,7 +16,9 @@ const Banner = () => {
           <div className={classes.twitterLogo}>
             <BsTwitter /> <span>@Wolox</span>
           </div>
-          <Button variant="outlined">Siguenos</Button>
+          <Link to={{ pathname: 'https://twitter.com/wolox' }} target='_blank'>
+            <Button variant='outlined'>Siguenos</Button>
+          </Link>
         </div>
         <h1 className={classes.bannerText}>
           Trabajamos para <span className={classes.blue}>convertir</span>

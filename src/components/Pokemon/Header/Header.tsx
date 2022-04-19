@@ -2,6 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import classes from './Header.module.scss';
 import { Button } from '../../Button';
+import { Link } from 'react-router-dom';
 import pokeball from '../../../assets/poke.png';
 
 interface HearderProps {
@@ -17,7 +18,9 @@ const Header: React.FC<HearderProps> = ({ className }) => {
           Pokemon finder
         </div>
         <div className={classes.button}>
-          <Button>Home</Button>
+          <Link to={'/'}>
+            <Button>Home</Button>
+          </Link>
         </div>
       </div>
     </>

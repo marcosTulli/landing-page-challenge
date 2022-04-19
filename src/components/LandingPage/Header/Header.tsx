@@ -5,9 +5,11 @@ import classes from './Header.module.scss';
 import logo from '../../../assets/logo_full_color.svg';
 import { MdMenu } from 'react-icons/md';
 import { useMedia } from 'react-media';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const isMobile = useMedia({ query: '(max-width: 768px)' });
+
   return (
     <header className={classes.mainheader}>
       <nav className={classes.nav}>
@@ -17,22 +19,49 @@ const Header = () => {
           </li>
           <div>
             {isMobile ? (
-              <li className={classes.listItem}>
-                <MdMenu />
-              </li>
+              <ul className={classes.mobileNav}>
+                <li className={classes.listItem}>
+                  <Link to={'/pokemons'}>
+                    <Button className={classes.button} variant='primary'>
+                      Pokemons
+                    </Button>{' '}
+                  </Link>
+                </li>
+
+                <li className={classes.listItem}>
+                  <MdMenu />
+                </li>
+              </ul>
             ) : (
               <div className={classes.largeNav}>
                 <li className={classes.listItem}>
-                  {' '}
-                  <Button variant='base'>Inicio</Button>{' '}
+                  <Link to={'/pokemons'}>
+                    <Button className={classes.button} variant='primary'>
+                      Pokemons
+                    </Button>{' '}
+                  </Link>
+                </li>
+                <li className={classes.listItem}>
+                  <Link to={'/'}>
+                    <Button
+                      onClick={() => {}}
+                      className={classes.button}
+                      variant='base'>
+                      Inicio
+                    </Button>{' '}
+                  </Link>
                 </li>
                 <li className={classes.listItem}>
                   {' '}
-                  <Button variant='base'>Beneficios</Button>{' '}
+                  <Button onClick={() => {}} variant='base'>
+                    Beneficios
+                  </Button>{' '}
                 </li>
                 <li className={classes.listItem}>
                   {' '}
-                  <Button variant='outlinedNav'>Login</Button>{' '}
+                  <Button onClick={() => {}} variant='outlinedNav'>
+                    Login
+                  </Button>{' '}
                 </li>
               </div>
             )}
